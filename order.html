@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주문하기 | Cat Keyring</title>
+  <link href="https://fonts.googleapis.com/css2?family=SUIT&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'SUIT', sans-serif;
+    }
+    body {
+      margin: 0;
+      background-color: #f0fdf4;
+      color: #1b4332;
+    }
+    nav {
+      background-color: #2d6a4f;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+    .menu a {
+      color: white;
+      margin-left: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .menu a:hover {
+      color: #b7e4c7;
+    }
+    .container {
+      max-width: 600px;
+      margin: 80px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2em;
+      color: #2d6a4f;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      font-size: 1em;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #40916c;
+      outline: none;
+    }
+    button {
+      background-color: #40916c;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 1.1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #1b4332;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">CatKeyring</div>
+    <div class="menu">
+      <a href="Index.html">홈</a>
+      <a href="producys.html">제품 소개</a>
+      <a href="order.html">주문하기</a>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>키링 주문하기</h2>
+    <form action="#" method="post">
+      <label for="name">이름</label>
+      <input type="text" id="name" name="name" placeholder="홍길동" required>
+
+      <label for="phone">연락처</label>
+      <input type="tel" id="phone" name="phone" placeholder="010-1234-5678" required>
+
+      <label for="address">배송 주소</label>
+      <textarea id="address" name="address" rows="3" placeholder="서울특별시 강남구 ..." required></textarea>
+
+      <label for="product">키링 종류</label>
+      <select id="product" name="product" required>
+        <option value="">-- 선택하세요 --</option>
+        <option value="leaf">바나나 고양이 키링</option>
+        <option value="flower">강호동 고양이 키링</option>
+        <option value="wood">뭔가 잘못된 고양이 키링</option>
+        <option value="heart">빙판 위를 걷는 고양이 키링</option>
+        <option value="crystal">사랑에 빠진 고양이 키링</option>
+        <option value="star">갈등이 생긴 고양이 키링</option>
+         <option value="star">빵이 된 고양이 키링</option>
+         <option value="star">손 놔라 고양이 키링</option>
+      </select>
+
+      <label for="quantity">수량</label>
+      <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" required>
+
+      <button type="submit">주문 완료</button>
+    </form>
+    <div class="footer">© 2025 CatKeyring. All rights reserved.</div>
+  </div>
+</body>
+</html>
+
+
