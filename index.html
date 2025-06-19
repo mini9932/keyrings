@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cat Keyring Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=SUIT&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'SUIT', sans-serif;
+    }
+    body {
+      margin: 0;
+      background-color: #ffffff;
+      color: #1b4332;
+    }
+    nav {
+      background-color: #ffffff;
+      color: #1b4332;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    .logo {
+      font-size: 2em;
+      font-weight: bold;
+      color: #1b4332;
+    }
+    .menu a {
+      color: #1b4332;
+      margin-left: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .menu a:hover {
+      color: #52b788;
+    }
+    header.hero {
+      background-image: url('yy.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    header.hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      animation: fadeSlide 1.5s ease-out;
+    }
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .hero-content h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      animation: slideIn 2s ease forwards;
+    }
+    .hero-content p {
+      font-size: 1.3em;
+      animation: slideIn 2.5s ease forwards;
+    }
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 40px;
+      background-color: #52b788;
+      color: white;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #40916c;
+    }
+    .gallery {
+      padding: 100px 40px;
+      text-align: center;
+    }
+    .gallery h2 {
+      font-size: 2.6em;
+      margin-bottom: 40px;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      padding: 0 10px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    }
+    .card img {
+      width: 100%;
+      display: block;
+    }
+    .card p {
+      padding: 20px;
+      font-weight: 600;
+      font-size: 1em;
+      color: #2d6a4f;
+    }
+    .highlight {
+      background-color: #e9f5ec;
+      padding: 80px 20px;
+      font-size: 1.4em;
+      font-weight: bold;
+      line-height: 2;
+      text-align: center;
+    }
+    .order {
+      background-color: #edf6f9;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .order h2 {
+      font-size: 2.4em;
+      margin-bottom: 30px;
+    }
+    .order a {
+      display: inline-block;
+      padding: 16px 36px;
+      font-size: 1.2em;
+      background-color: #40916c;
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .order a:hover {
+      background-color: #1b4332;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">CatKeyring</div>
+    <div class="menu">
+      <a href="Index.html">홈</a>
+      <a href="producys.html">제품 소개</a>
+      <a href="order.html">주문하기</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>고양이 키링을 원하시나요?</h1>
+      <p>재미있고 귀여운 키링, 지금 만나보세요</p>
+      <a href="producys.html" class="cta-button">제품 보기</a>
+    </div>
+  </header>
+
+  <section class="gallery">
+    <h2>Best Keyrings</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="바나나.jpg" alt="리프 키링">
+        <p> 바나나 고양이 키링</p>
+      </div>
+      <div class="card">
+        <img src="요가.jpg" alt="플라워 키링">
+        <p> 뭔가 잘못된 고양이 키링</p>
+      </div>
+      <div class="card">
+        <img src="한강.jpg" alt="우드 키링">
+        <p>빙판 위를 걷는 고양이 키링</p>
+      </div>
+      <div class="card">
+        <img src="뚱.jpg" alt="하트 키링">
+        <p>  강호동 고양이 키링</p>
+      </div>
+      <div class="card">
+        <img src="혼나는.jpg" alt="크리스탈 키링">
+        <p> 갈등이 생긴 고양이 키링 </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight">
+    재미있고 요즘 트렌드에 맞는!<br/>
+    가방을 걸어서 예쁘게 꾸밀 수있는!<br/>
+    🎁 친구에게 선물하기 좋은 키링
+  </section>
+
+  <section class="order">
+    <h2>지금 주문하고 특별한 키링을 소장하세요!</h2>
+    <a href="order.html">주문하러 가기</a>
+  </section>
+</body>
+</html>
+
